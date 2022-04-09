@@ -1,18 +1,18 @@
-import './ExpenseItem.css'
+import React from "react";
+import "./css/ExpenseItem.css"
+import ExpenseDate from "./ExpenseDate"
+import Card from "./Card"
 
-const ExpenseItem = () => {
-  const expenseDate = new Date(2022, 4, 9)
-  const expeneseTitle = 'Car Insurance'
-  const expenseAmount = 204.67
+const ExpenseItem = (props) => {
 
   return (
-    <div className='expense-item'>
-      <div>{expenseDate.toISOString()}</div>
-      <div className='expense-item__description'>
-        <h2>{expeneseTitle}</h2>
+    <Card className="expense-item">
+      <ExpenseDate date={props.date} />
+      <div className="expense-item__description">
+        <h2>{props.title}</h2>
       </div>
-      <div className='expense-item__price'>${expenseAmount}</div>
-    </div>
+      <div className="expense-item__price">${props.amount}</div>
+    </Card>
   );
 };
 
