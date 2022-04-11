@@ -9,7 +9,6 @@ const Expenses = (props) => {
   const [filteredYear, setFilteredYear] = useState('2020')
 
   const filterChangeHanlder = (selectedYear) => {
-    console.log('expenses.js')
     setFilteredYear(selectedYear)
   }
 
@@ -22,8 +21,8 @@ const Expenses = (props) => {
             title={expense.title}
             amount={expense.amount}
             date={expense.date}
-          />
-        ))}
+            />
+            ))}
 
       </Card>
     </div>
