@@ -18,6 +18,7 @@ const Expenses = (props) => {
           selected={filteredYear}
           onChangeFilter={filterChangeHanlder}
         />
+        
         {props.items
         .filter(
           (expense) =>
